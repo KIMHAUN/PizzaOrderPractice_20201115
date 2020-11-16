@@ -26,6 +26,8 @@ class PizzaOrder : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        //set values
+
 
     }
 }
