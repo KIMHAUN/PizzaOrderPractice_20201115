@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import kr.co.neoplus.pizzaorderpractice_20201115.R
 import kr.co.neoplus.pizzaorderpractice_20201115.datas.PizzaStore
 
@@ -26,10 +28,15 @@ class PizzaStoreAdapter(val mContext: Context,
         val pizzaData = mList[position]
         val phoneNoTxt = row.findViewById<TextView>(R.id.phoneNoTxt)
         val storeNameTxt = row.findViewById<TextView>(R.id.storeNameTxt)
-        //val descriptionTxt = row.findViewById<TextView>(R.id.descriptionTxt)
+        val pizzaLogoImg = row.findViewById<ImageView>(R.id.pizzaLogoImg)
 
         phoneNoTxt.text = pizzaData.phoneNo
         storeNameTxt.text = pizzaData.name
+        val pizzaLogoURL = pizzaData.logoURL
+       // pizzaLogoImg.text = pizzaData.logoURL
+
+
+       Glide.with(mContext).load(pizzaLogoURL).into(pizzaLogoImg)
        // addressAndFloor.text = roomData.getFormattedFloor()
 
 

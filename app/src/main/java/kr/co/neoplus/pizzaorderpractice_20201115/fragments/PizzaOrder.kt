@@ -31,7 +31,6 @@ class PizzaOrder : Fragment() {
         mPizzaStoreList.add(PizzaStore("도미노피자 ", "1577-3082", "https://pbs.twimg.com/profile_images/1098371010548555776/trCrCTDN_400x400.png"))
 
         mPizzaStoreAdapter = PizzaStoreAdapter(context!!, R.layout.pizza_list_item, mPizzaStoreList)
-
         listView.adapter = mPizzaStoreAdapter
         //return inflater.inflate(R.layout.fragment_pizza, container, false)
         return rootView

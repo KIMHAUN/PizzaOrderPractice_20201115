@@ -23,6 +23,8 @@ class MainActivity : BaseActivity() {
         pizzaViewPager.adapter = mvpa
 
         pizzaTabLayout.setupWithViewPager(pizzaViewPager)
+
+
     }
 
 
