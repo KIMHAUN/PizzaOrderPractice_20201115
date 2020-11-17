@@ -1,16 +1,6 @@
 package kr.co.neoplus.pizzaorderpractice_20201115.adapters
 
 import android.content.Context
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.TextView
-import kr.co.neoplus.pizzaorderpractice_20201115.R
-import kr.co.neoplus.pizzaorderpractice_20201115.datas.PizzaStore
-import kr.co.neoplus.pizzaorderpractice_20201115.fragments.PizzaOrder
-
-import android.content.Context
 import android.widget.ArrayAdapter
 import kr.co.neoplus.pizzaorderpractice_20201115.datas.PizzaStore
 
