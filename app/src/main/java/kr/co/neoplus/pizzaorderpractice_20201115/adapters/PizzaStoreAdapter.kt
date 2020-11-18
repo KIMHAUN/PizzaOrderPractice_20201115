@@ -38,9 +38,6 @@ class PizzaStoreAdapter(val mContext: Context,
 
        Glide.with(mContext).load(pizzaLogoURL).into(pizzaLogoImg)
        // addressAndFloor.text = roomData.getFormattedFloor()
-
-
-
         return row
     }
 }

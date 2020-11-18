@@ -1,5 +1,6 @@
 package kr.co.neoplus.pizzaorderpractice_20201115.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -33,6 +34,19 @@ class PizzaOrder : Fragment() {
         mPizzaStoreAdapter = PizzaStoreAdapter(context!!, R.layout.pizza_list_item, mPizzaStoreList)
         listView.adapter = mPizzaStoreAdapter
         //return inflater.inflate(R.layout.fragment_pizza, container, false)
+
+        //setEvents
+        listView.setOnItemClickListener { parent, view, position, id ->
+            val clickedPizzaStore = mPizzaStoreList[position]
+
+            //val myIntent = Intent(context!!, ViewPizzaStore)
+        }
+
+
+
+
+
+
         return rootView
 
     }
