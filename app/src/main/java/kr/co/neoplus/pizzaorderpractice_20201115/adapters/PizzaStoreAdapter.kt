@@ -26,11 +26,11 @@ class PizzaStoreAdapter(val mContext: Context,
         val row = tempRow!!
 
         val pizzaData = mList[position]
-        val phoneNoTxt = row.findViewById<TextView>(R.id.phoneNoTxt)
+        //val phoneNoTxt = row.findViewById<TextView>(R.id.phoneNoTxt)
         val storeNameTxt = row.findViewById<TextView>(R.id.storeNameTxt)
         val pizzaLogoImg = row.findViewById<ImageView>(R.id.pizzaLogoImg)
 
-        phoneNoTxt.text = pizzaData.phoneNo
+       // phoneNoTxt.text = pizzaData.phoneNo
         storeNameTxt.text = pizzaData.name
         val pizzaLogoURL = pizzaData.logoURL
        // pizzaLogoImg.text = pizzaData.logoURL
