@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ListView
 import androidx.fragment.app.Fragment
 import kr.co.neoplus.pizzaorderpractice_20201115.R
+import kr.co.neoplus.pizzaorderpractice_20201115.ViewPizzaStoreDetailActivity
 import kr.co.neoplus.pizzaorderpractice_20201115.adapters.PizzaStoreAdapter
 import kr.co.neoplus.pizzaorderpractice_20201115.datas.PizzaStore
 
@@ -39,14 +40,10 @@ class PizzaOrder : Fragment() {
         listView.setOnItemClickListener { parent, view, position, id ->
             val clickedPizzaStore = mPizzaStoreList[position]
 
-            //val myIntent = Intent(context!!, ViewPizzaStore)
+            val myIntent = Intent(context!!, ViewPizzaStoreDetailActivity::class.java)
+            myIntent.putExtra("pizzaStoreData", clickedPizzaStore)
+            startActivity(myIntent)
         }
-
-
-
-
-
-
         return rootView
 
     }
