@@ -1,5 +1,6 @@
 package kr.co.neoplus.pizzaorderpractice_20201115.fragments
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,6 +15,8 @@ import kr.co.neoplus.pizzaorderpractice_20201115.EditNickNameActivity
 import kr.co.neoplus.pizzaorderpractice_20201115.R
 
 class MyInfo : Fragment() {
+
+    val REQ_FOR_DATA = 1000
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,13 +35,21 @@ class MyInfo : Fragment() {
 
         //닉네임 변경 화면으로 가기
         changeNickName.setOnClickListener {
-           // val inputContent = newDataEdt.text.toString()
-            // myIntent.putExtra("newNickName", inputContent)
+
             val myIntent = Intent(context!!, EditNickNameActivity::class.java)
 
 
-            startActivity(myIntent)
+            startActivityForResult(myIntent, REQ_FOR_DATA)
         }
 
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if(requestCode == REQ_FOR_DATA){
+            val newInputData = data?.getStringExtra("newData")
+            myNickName.text = newInputData
+        }
     }
 }
